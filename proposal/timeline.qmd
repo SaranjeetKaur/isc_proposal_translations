@@ -10,7 +10,7 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Reporting framework
 -->
 
-The project will be setup as a GitHub repository and the various steps for the development will be opened as issues on GitHub. Development will take place and be tracked by creating pull requests associated to the issues. Appropriate license will be chosen for the package. The contributors to the project will be acknowledged using the all contributors bot on GitHub.
+The project will be setup as a GitHub repository and the various steps for the development will be opened as issues on GitHub. Development will take place and be tracked by creating pull requests associated to the issues. Appropriate license will be chosen for the package. The contributors to the project will be acknowledged using the all contributors bot on GitHub. The work on the project will be regularly reported to the community through the [R Contributor Office Hours](https://contributor.r-project.org/events/office-hours/).
 
 ## Technical delivery
 <!--
