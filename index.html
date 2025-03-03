@@ -3153,25 +3153,21 @@ It is important to cover:
 -->
 <p>An example in-text citation <span class="citation" data-cites="wickham2016">(<a href="#ref-wickham2016" role="doc-biblioref">Wickham 2016</a>)</span>.</p>
 <p>The problem being addressed is the inconsistency in the translations glossary across languages in R. This inconsistency affects users who rely on translations to use R. The translations glossary is used to translate messages in R and is currently managed using Weblate. However, the glossary is not consistent across languages, which makes it difficult for users to translate messages accurately. This can lead to errors in translations and make it difficult for users to contribute to the translations process.</p>
-<p>Previous attempts to resolve this problem have been made by the R Contribution Working Group (RCWG) through the use of Weblate. However, the translations glossary is still not consistent across languages. This proposal aims to address this issue by creating an R package that will allow users to access the glossary and use it to translate messages in R. This will help in creating a consistent glossary across languages and improve the translation process in R.</p>
-<p>This problem should be tackled because it affects the user experience of R for users who do not speak English. By creating a consistent glossary across languages, we can improve the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
+<p>Previous attempts to resolve this problem have been made by the R Contribution Working Group (RCWG) through the use of Weblate. However, the translations glossary is still not consistent across languages. This proposal aims to address this issue by creating an R package that will help maintain a consistent glossary across languages and improve the translation process in R.</p>
+<p>This problem should be tackled because it affects the user experience of R for users who do not speak English. By having a consistent glossary across languages, we can improve the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
 </section>
 <section id="the-proposal" class="level1">
 <h1>The proposal</h1>
 <!--
 This is where the proposal should be outlined. 
 -->
-<p>The <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a> has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives that aims to improve the translations process in R to have a consistent glossary across languages.</p>
+<p>The <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a> has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives with the aim to improve the technical infrastructure of the translations process in R.</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
-<p>The RCWG uses <a href="https://translate.rx.studio/projects/r-project/">Weblate</a> to track and translate messages in R. However, the translations <a href="https://translate.rx.studio/projects/r-project/glossary/">glossary</a> is not consistent across languages. This proposal aims to create an R package that will allow users to access the glossary and use it to translate messages in R. This will help in creating a consistent glossary across languages and improve the translation process in R. It will also help in improving the quality of translations and make it easier for users to contribute to the translations process.</p>
-<section id="benefit-to-the-r-community" class="level3">
-<h3 class="anchored" data-anchor-id="benefit-to-the-r-community">Benefit to the R community</h3>
-<p>The proposed package will help in creating a consistent glossary across languages and improve the translation process in R. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
-</section>
+<p>The RCWG uses <a href="https://translate.rx.studio/projects/r-project/">Weblate</a> to track and translate messages in R. However, the translations <a href="https://translate.rx.studio/projects/r-project/glossary/">glossary</a> is not consistent across languages. This proposal aims to create an R package that will help to maintain a consistent glossary across languages during the translation process. It will also help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
 </section>
 <section id="detail" class="level2">
 <h2 class="anchored" data-anchor-id="detail">Detail</h2>
@@ -3186,10 +3182,9 @@ Depending on project type the detail section should include:
 -->
 <section id="minimum-viable-product" class="level3">
 <h3 class="anchored" data-anchor-id="minimum-viable-product">Minimum Viable Product</h3>
-<p>The minimum viable product will be an R package that will allow users to access the glossary and use it to translate messages in R. The package will have the following high-level functions:</p>
+<p>The R package will help to maintain a consistent glossary across languages during the translation process. The package will have the following high-level functions:</p>
 <ol type="1">
 <li><p><code>get_glossary()</code>: This function will return the glossary in a data frame format.</p></li>
-<li><p><code>translate_message()</code>: This function will take a message in English and return the translated message using the glossary.</p></li>
 <li><p><code>update_glossary()</code>: This function will allow users to update the glossary.</p></li>
 <li><p><code>save_glossary()</code>: This function will allow users to save the glossary to a file.</p></li>
 <li><p><code>load_glossary()</code>: This function will allow users to load the glossary from a file.</p></li>
@@ -3199,16 +3194,14 @@ Depending on project type the detail section should include:
 </section>
 <section id="architecture" class="level3">
 <h3 class="anchored" data-anchor-id="architecture">Architecture</h3>
-<p>The package will use the Weblate API to access the glossary and translate messages. The package will have a data frame that will store the glossary and will be used to translate messages. The package will also have a function that will allow users to update the glossary.</p>
+<p>The package will use the Weblate API. The package will have a data frame that will store the glossary. The package will also have a function that will allow users to update the glossary.</p>
 </section>
 <section id="assumptions" class="level3">
 <h3 class="anchored" data-anchor-id="assumptions">Assumptions</h3>
 <p>The assumptions for this project are:</p>
 <ol type="1">
 <li>The Weblate API will be available and accessible.</li>
-<li>The glossary will be consistent across languages.</li>
 <li>The package will be able to handle different languages and translations.</li>
-<li>The package will be able to handle different types of messages and translations.</li>
 </ol>
 </section>
 </section>
