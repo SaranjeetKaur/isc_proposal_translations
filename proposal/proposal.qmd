@@ -3,18 +3,14 @@
 This is where the proposal should be outlined. 
 -->
 
-The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives that aims to improve the translations process in R to have a consistent glossary across languages.
+The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives with the aim to improve the technical infrastructure of the translations process in R. 
 
 ## Overview
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
 
-The RCWG uses [Weblate](https://translate.rx.studio/projects/r-project/) to track and translate messages in R. However, the translations [glossary](https://translate.rx.studio/projects/r-project/glossary/) is not consistent across languages. This proposal aims to create an R package that will allow users to access the glossary and use it to translate messages in R. This will help in creating a consistent glossary across languages and improve the translation process in R. It will also help in improving the quality of translations and make it easier for users to contribute to the translations process.
-
-### Benefit to the R community
-
-The proposed package will help in creating a consistent glossary across languages and improve the translation process in R. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
+The RCWG uses [Weblate](https://translate.rx.studio/projects/r-project/) to track and translate messages in R. However, the translations [glossary](https://translate.rx.studio/projects/r-project/glossary/) is not consistent across languages. This proposal aims to create an R package that will help to maintain a consistent glossary across languages during the translation process. It will also help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
 
 ## Detail
 <!--
@@ -29,31 +25,27 @@ Depending on project type the detail section should include:
 
 ### Minimum Viable Product
 
-The minimum viable product will be an R package that will allow users to access the glossary and use it to translate messages in R. The package will have the following high-level functions:
+The R package will help to maintain a consistent glossary across languages during the translation process. The package will have the following high-level functions:
 
 1. `get_glossary()`: This function will return the glossary in a data frame format.
 
-2. `translate_message()`: This function will take a message in English and return the translated message using the glossary.
+2. `update_glossary()`: This function will allow users to update the glossary.
 
-3. `update_glossary()`: This function will allow users to update the glossary.
+3. `save_glossary()`: This function will allow users to save the glossary to a file.
 
-4. `save_glossary()`: This function will allow users to save the glossary to a file.
+4. `load_glossary()`: This function will allow users to load the glossary from a file.
 
-5. `load_glossary()`: This function will allow users to load the glossary from a file.
+5. `reset_glossary()`: This function will allow users to reset the glossary to the original version.
 
-6. `reset_glossary()`: This function will allow users to reset the glossary to the original version.
-
-7. `get_languages()`: This function will return the list of languages available in the glossary.
+6. `get_languages()`: This function will return the list of languages available in the glossary.
 
 ### Architecture
 
-The package will use the Weblate API to access the glossary and translate messages. The package will have a data frame that will store the glossary and will be used to translate messages. The package will also have a function that will allow users to update the glossary.
+The package will use the Weblate API. The package will have a data frame that will store the glossary. The package will also have a function that will allow users to update the glossary.
 
 ### Assumptions
 
 The assumptions for this project are:
 
 1. The Weblate API will be available and accessible.
-2. The glossary will be consistent across languages.
-3. The package will be able to handle different languages and translations.
-4. The package will be able to handle different types of messages and translations.
+2. The package will be able to handle different languages and translations.
