@@ -1,10 +1,10 @@
 ---
-title: "Proposal Title"
+title: "R Translation Glossary Package"
 author: 
-  - name: Annie Easley
-    orcid: 5555-5555-5555-5555
+  - name: Saranjeet Kaur Bhogal
+    orcid: 0000-0002-7038-1457
     affiliations:
-      - "Lewis Research Center, National Aeronautics and Space Administration"
+      - "Imperial College London"
     
 date: today
 date-format: iso

@@ -10,6 +10,7 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Reporting framework
 -->
 
+The project will be setup as a GitHub repository and the various steps for the development will be opened as issues on GitHub. Development will take place and be tracked by creating pull requests associated to the issues. Appropriate license will be chosen for the package. The contributors to the project will be acknowledged using the all contributors bot on GitHub.
 
 ## Technical delivery
 <!--
@@ -17,6 +18,8 @@ Covering the actual delivery of the project this section should provide at least
 
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
+
+The work on the package development will begin around July 2025 until October 2025. The development work will be associated with milestones and deliverables which will be tracked through GitHub. A final blog post will be published to share the work done along with social media announcements. If possible, the work will also be publised on relevant events and R community events (including R-Ladies and RUG meetups).
 
 ## Other aspects
 <!--
@@ -28,3 +31,5 @@ Covering non-technical activities like on-going publicity, paper preparation, di
  - [ ] UseR!
  - [ ] ISC meetings
 -->
+
+The project will be promoted through the RCWG to ensure that the R community is aware of the project. Regular updates will be provided to the R community on the progress of the project. Feedback will be sought from the community to ensure that the package meets the needs of the users. The updates will be provided through regular blog posts and announcements on social media platforms.

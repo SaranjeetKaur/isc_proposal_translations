@@ -3,20 +3,60 @@
 Projects should have a definition of done that is measurable, and a thorough understanding going in of what the risks are to delivery 
 -->
 
+The project will be considered a success if the following criteria are met:
+
+1. The R package is developed and tested.
+
+2. The package is documented and available on the package website.
+
+3. Eventually release the package on CRAN. (This may not happen within the proposed timeline but is a long-term goal. However, the package will be available on GitHub for users to access.)
+
+4. Feedback will be sought from the R community to ensure that the package meets the needs of the users.
+
 ## Definition of done
 <!-- 
 What does success look like? 
 -->
+
+The project will be considered done when the following criteria are met:
+
+1. The R package is developed and tested.
+
+2. The package is documented and available on the package website.
+
+3. Feedback will be sought from the R community to ensure that the package meets the needs of the users.
+
+4. Long-term goal: The package is released on CRAN.
 
 ## Measuring success
 <!-- 
 How will we know when success is achieved, what markers can we use along the way 
 -->
 
+The success of the project will be measured by the following metrics:
+
+1. Closing the issues related to the package development on GitHub.
+
+2. Pull requests are reviewed and merged.
+
+3. The package is documented and available on the package website.
+
 ## Future work
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
+
+The project can be extended in the following ways:
+
+1. Add more functions to the package to make it more user-friendly.
+
+2. Improve the translation process by adding more languages to the glossary.
+
+3. Add more features to the package to make it more useful for users.
+
+4. Improve the documentation and make it more accessible to users.
+
+5. Release the package on CRAN to make it more accessible to users.
 
 ## Key risks
 <!-- 
@@ -28,3 +68,5 @@ What sort of things could come up that can delay or break the project?
  - [ ] Costs
 
 -->
+
+The are not any major risks associated with this project. The idea for the project is based on an actual need by the R community and has the support of the RCWG. The lead developer has experience in developing R packages and has contributed to the R community. The project will follow the best practices for R package development and will seek feedback from the R community to ensure that the package meets the needs of the users.

@@ -17,3 +17,9 @@ It is important to cover:
 -->
 ```
 An example in-text citation [@wickham2016].
+
+The problem being addressed is the inconsistency in the translations glossary across languages in R. This inconsistency affects users who rely on translations to use R. The translations glossary is used to translate messages in R and is currently managed using Weblate. However, the glossary is not consistent across languages, which makes it difficult for users to translate messages accurately. This can lead to errors in translations and make it difficult for users to contribute to the translations process. 
+
+Previous attempts to resolve this problem have been made by the R Contribution Working Group (RCWG) through the use of Weblate. However, the translations glossary is still not consistent across languages. This proposal aims to address this issue by creating an R package that will allow users to access the glossary and use it to translate messages in R. This will help in creating a consistent glossary across languages and improve the translation process in R.
+
+This problem should be tackled because it affects the user experience of R for users who do not speak English. By creating a consistent glossary across languages, we can improve the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
