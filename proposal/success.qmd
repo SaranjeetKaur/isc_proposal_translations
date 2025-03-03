@@ -5,13 +5,13 @@ Projects should have a definition of done that is measurable, and a thorough und
 
 The project will be considered a success if the following criteria are met:
 
-1. The R package is developed and tested.
 
-2. The package is documented and available on the package website.
-
-3. Eventually release the package on CRAN. (This may not happen within the proposed timeline but is a long-term goal. However, the package will be available on GitHub for users to access.)
-
-4. Feedback will be sought from the R community to ensure that the package meets the needs of the users.
+- The key deliverables are met: the package includes the planned functionality, which is documented and tested.
+- The documentation is available on the package website.
+- At least 75% of the open issues on the planned R package repository are closed or at least become work-in-progress.
+- Eventually release the package on CRAN. (This may not happen within the proposed timeline but is a long-term goal. However, the package will be available on GitHub for users to access.)
+- Feedback is sought (and incorporated as far as possible) from the R community to ensure that the package meets the needs of the users.
+- At least two community members that are not directly involved in the project contribute to the package development, by submitting issues, making a pull request or making a commit to the git repository.
 
 ## Definition of done
 <!-- 
@@ -20,13 +20,13 @@ What does success look like?
 
 The project will be considered done when the following criteria are met:
 
-1. The R package is developed and tested.
+- The R package is developed and tested.
 
-2. The package is documented and available on the package website.
+- The package is documented and available on the package website.
 
-3. Feedback will be sought from the R community to ensure that the package meets the needs of the users.
+- Feedback will be sought from the R community to ensure that the package meets the needs of the users.
 
-4. Long-term goal: The package is released on CRAN.
+- Long-term goal: The package is released on CRAN.
 
 ## Measuring success
 <!-- 
@@ -35,11 +35,11 @@ How will we know when success is achieved, what markers can we use along the way
 
 The success of the project will be measured by the following metrics:
 
-1. Closing the issues related to the package development on GitHub.
+- At least 75% of the open issues on the planned R package repository are closed or at least become work-in-progress.
 
-2. Pull requests are reviewed and merged.
+- At least 85% of the pull requests are reviewed and merged.
 
-3. The package is documented and available on the package website.
+- The package is documented and available on the package website.
 
 ## Future work
 <!-- 
