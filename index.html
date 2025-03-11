@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Saranjeet Kaur Bhogal">
-<meta name="dcterms.date" content="2025-03-03">
+<meta name="dcterms.date" content="2025-03-11">
 
-<title>R Translation Glossary Package</title>
+<title>Consistent Translations Glossary across R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -3076,7 +3076,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R Translation Glossary Package</h1>
+<h1 class="title">Consistent Translations Glossary across R</h1>
 </div>
 
 
@@ -3100,7 +3100,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-03-03</p>
+      <p class="date">2025-03-11</p>
     </div>
   </div>
   
@@ -3161,13 +3161,20 @@ It is important to cover:
 <!--
 This is where the proposal should be outlined. 
 -->
-<p>The <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a> has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives with the aim to improve the technical infrastructure of the translations process in R.</p>
+<p>The <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a> has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives with the aim to improve the technical infrastructure of the translations process by providing a common glossary for R translation projects and sharing the translations across projects to avoid duplicated work.</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
-<p>The RCWG uses <a href="https://translate.rx.studio/projects/r-project/">Weblate</a> to track and translate messages in R. However, the translations <a href="https://translate.rx.studio/projects/r-project/glossary/">glossary</a> is not consistent across languages. This proposal aims to create an R package that will help to maintain a consistent glossary across languages during the translation process. It will also help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
+<p>This proposal aims to improve the technical infrastructure of the translations process for R packages. The goal is to provide a common shared glossary across the different R translations projects. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
+<p>At present, different R projects use different translation workflow:</p>
+<ul>
+<li>base R and the recommended packages - use Weblate, currently using same glossary for base R and recommended packages.</li>
+<li>rOpenSci - uses a GitHub-based workflow. They also have a <a href="https://github.com/ropensci-review-tools/glossary/blob/master/glossary.csv">work in progress glossary</a>.</li>
+<li>Bioconductor - uses <a href="https://bioconductor.crowdin.com">Crowdin</a> and is most likely not using any glossaries.</li>
+</ul>
+<p>Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, and Bioconductor.</p>
 </section>
 <section id="detail" class="level2">
 <h2 class="anchored" data-anchor-id="detail">Detail</h2>
@@ -3180,17 +3187,47 @@ Depending on project type the detail section should include:
  - [ ] Architecture
  - [ ] Assumptions
 -->
+<p>This project aims for the following:</p>
+<ul>
+<li>Creation of common glossary, starting by combining Weblate glossary terminology terms and rOpenSci WIP glossary.
+<ul>
+<li>Columns to include: date added, source string, translations for different languages, optional explanation for different languages (e.g. can explain that a particular word should be kept in English, or note synonyms), explanation in English (can be used to explain the meaning of a term), added via (Weblate/GitHub), updated via (Weblate/GitHub), Weblate (include/exclude/NA),</li>
+</ul></li>
+<li>Documented process for people to suggest additions to and deletions from the common glossary.
+<ul>
+<li>Preferred: pull request on the underlying CSV so that it is easy to update the common glossary once proposed changes are reviewed</li>
+<li>Alternative: proposal via GitHub issue, perhaps using template to ensure essential information is given</li>
+</ul></li>
+<li>Tools to update common glossary with updates from Weblate
+<ul>
+<li>Get current glossary and translations from Weblate.</li>
+<li>Update common glossary with new terminology and their translations (set <code>added_via</code> column to Weblate and <code>weblate</code> to include)</li>
+<li>Update common glossary with new/updated translations of existing terms (set <code>update_via</code> column to Weblate)</li>
+<li>Update common glossary with deleted terms. These terms should not be removed, but the <code>weblate</code> column should be set to exclude)</li>
+<li>GitHub Action to regularly update common glossary based on updates to Weblate</li>
+</ul></li>
+<li>Tools to update Weblate with changes in common glossary
+<ul>
+<li>Get current glossary and translations from Weblate. Update Weblate glossary with terms added via GitHub that are flagged to be included. (Should be added to English glossary with flag “terminology”.)</li>
+<li>Update Weblate glossary with new/updated translations of terminology terms.</li>
+<li>GitHub action to regularly update Weblate based on changes to common glossary. Need to ask Gergely if this is possible - may need to be semi-manual process.</li>
+</ul></li>
+<li>Tools for CrowdIn
+<ul>
+<li>Could be similar to those for Weblate, but currently no glossary to test on. Could perhaps start one on an active project.</li>
+</ul></li>
+<li>Maintenance tools (for tasks requiring manual review, that may need doing from time to time).
+<ul>
+<li>Identify strings in common glossary that have been removed from Weblate (<code>added_via</code> is Weblate but <code>weblate</code> is <code>exclude</code>). Select to keep (change <code>added_via</code> to GtiHub) or delete (remove term from common glossary).</li>
+<li>Identify strings in common glossary that are not on Weblate (<code>added_via</code> is GitHub and <code>weblate</code> is NA). Select to add (set <code>weblate</code> to include) or ignore (set <code>weblate</code> to <code>exclude</code>).</li>
+<li>Identify strings in the Weblate glossary that are not flagged as “terminology”. Select to add terminology flag or remove.</li>
+<li>Identify strings in the Weblate glossary that are not flagged as “terminology”. Remove from the Weblate glossary for all languages.</li>
+<li>Identify strings in that are in language-specific glossaries but not in the English glossary. Select to add terminology flag or remove (language leads can propose new terms, but should end up using for all languages or none).</li>
+</ul></li>
+</ul>
+<p>Design principles: - automate sync as much as possible, but allow control over what is included in each glossary</p>
 <section id="minimum-viable-product" class="level3">
 <h3 class="anchored" data-anchor-id="minimum-viable-product">Minimum Viable Product</h3>
-<p>The R package will help to maintain a consistent glossary across languages during the translation process. The package will have the following high-level functions:</p>
-<ol type="1">
-<li><p><code>get_glossary()</code>: This function will return the glossary in a data frame format.</p></li>
-<li><p><code>update_glossary()</code>: This function will allow users to update the glossary.</p></li>
-<li><p><code>save_glossary()</code>: This function will allow users to save the glossary to a file.</p></li>
-<li><p><code>load_glossary()</code>: This function will allow users to load the glossary from a file.</p></li>
-<li><p><code>reset_glossary()</code>: This function will allow users to reset the glossary to the original version.</p></li>
-<li><p><code>get_languages()</code>: This function will return the list of languages available in the glossary.</p></li>
-</ol>
 </section>
 <section id="architecture" class="level3">
 <h3 class="anchored" data-anchor-id="architecture">Architecture</h3>
