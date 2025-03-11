@@ -3,14 +3,22 @@
 This is where the proposal should be outlined. 
 -->
 
-The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives with the aim to improve the technical infrastructure of the translations process in R. 
+The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to improve the R ecosystem and involves active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiatives with the aim to improve the technical infrastructure of the translations process by providing a common glossary for R translation projects and sharing the translations across projects to avoid duplicated work.
 
 ## Overview
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
 
-The RCWG uses [Weblate](https://translate.rx.studio/projects/r-project/) to track and translate messages in R. However, the translations [glossary](https://translate.rx.studio/projects/r-project/glossary/) is not consistent across languages. This proposal aims to create an R package that will help to maintain a consistent glossary across languages during the translation process. It will also help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
+This proposal aims to improve the technical infrastructure of the translations process for R packages. The goal is to provide a common shared glossary across the different R translations projects. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
+
+At present, different R projects use different translation workflow:
+
+- base R and the recommended packages - use Weblate, currently using same glossary for base R and recommended packages.
+- rOpenSci - uses a GitHub-based workflow. They also have a [work in progress glossary]( https://github.com/ropensci-review-tools/glossary/blob/master/glossary.csv).
+- Bioconductor - uses [Crowdin](https://bioconductor.crowdin.com) and is most likely not using any glossaries.
+
+Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, and Bioconductor.
 
 ## Detail
 <!--
@@ -23,21 +31,43 @@ Depending on project type the detail section should include:
  - [ ] Assumptions
 -->
 
+This project aims for the following:
+
+- Creation of common glossary, starting by combining Weblate glossary terminology terms and rOpenSci WIP glossary.
+  - Columns to include: date added, source string, translations for different languages, optional explanation for different languages (e.g. can explain that a particular word should be kept in English, or note synonyms), explanation in English (can be used to explain the meaning of a term), added via (Weblate/GitHub), updated via (Weblate/GitHub), Weblate (include/exclude/NA),
+
+- Documented process for people to suggest additions to and deletions from the common glossary.
+  - Preferred: pull request on the underlying CSV so that it is easy to update the common glossary once proposed changes are reviewed
+  - Alternative: proposal via GitHub issue, perhaps using template to ensure essential information is given
+  
+- Tools to update common glossary with updates from Weblate
+  - Get current glossary and translations from Weblate.
+  - Update common glossary with new terminology and their translations (set `added_via` column to Weblate and `weblate` to include)
+  - Update common glossary with new/updated translations of existing terms (set `update_via` column to Weblate)
+  - Update common glossary with deleted terms. These terms should not be removed, but the `weblate` column should be set to exclude)
+  - GitHub Action to regularly update common glossary based on updates to Weblate
+  
+- Tools to update Weblate with changes in common glossary
+  - Get current glossary and translations from Weblate.
+Update Weblate glossary with terms added via GitHub that are flagged to be included. (Should be added to English glossary with flag "terminology".)
+  - Update Weblate glossary with new/updated translations of terminology terms.
+  - GitHub action to regularly update Weblate based on changes to common glossary. Need to ask Gergely if this is possible - may need to be semi-manual process.
+
+- Tools for CrowdIn
+  - Could be similar to those for Weblate, but currently no glossary to test on. Could perhaps start one on an active project.
+
+- Maintenance tools (for tasks requiring manual review, that may need doing from time to time).
+  - Identify strings in common glossary that have been removed from Weblate (`added_via` is Weblate but `weblate` is `exclude`). Select to keep (change `added_via` to GtiHub) or delete (remove term from common glossary).
+  - Identify strings in common glossary that are not on Weblate (`added_via` is GitHub and `weblate` is NA). Select to add (set `weblate` to include) or ignore (set `weblate` to `exclude`).
+  - Identify strings in the Weblate glossary that are not flagged as "terminology". Select to add terminology flag or remove.
+  - Identify strings in the Weblate glossary that are not flagged as "terminology". Remove from the Weblate glossary for all languages.
+  - Identify strings in that are in language-specific glossaries but not in the English glossary. Select to add terminology flag or remove (language leads can propose new terms, but should end up using for all languages or none).
+  
+Design principles:
+- automate sync as much as possible, but allow control over what is included in each glossary
+
 ### Minimum Viable Product
 
-The R package will help to maintain a consistent glossary across languages during the translation process. The package will have the following high-level functions:
-
-1. `get_glossary()`: This function will return the glossary in a data frame format.
-
-2. `update_glossary()`: This function will allow users to update the glossary.
-
-3. `save_glossary()`: This function will allow users to save the glossary to a file.
-
-4. `load_glossary()`: This function will allow users to load the glossary from a file.
-
-5. `reset_glossary()`: This function will allow users to reset the glossary to the original version.
-
-6. `get_languages()`: This function will return the list of languages available in the glossary.
 
 ### Architecture
 

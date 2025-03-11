@@ -1,5 +1,5 @@
 ---
-title: "R Translation Glossary Package"
+title: "Consistent Translations Glossary across R"
 author: 
   - name: Saranjeet Kaur Bhogal
     orcid: 0000-0002-7038-1457
