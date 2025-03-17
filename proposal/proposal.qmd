@@ -31,6 +31,8 @@ Depending on project type the detail section should include:
  - [ ] Assumptions
 -->
 
+The translations [glossary](https://translate.rx.studio/projects/r-project/glossary/) is not consistent across languages. The R Contributors, as a part of R Dev Days, have been working on a combined list of terms and have added a common set of 175 terms that are flagged as "terminology" in the glossary. This flag ensures the terms appear in all the [glossaries](https://docs.weblate.org/en/latest/user/glossary.html#terminology). Most languages are using essentially these terms (most have a glossary of 178 terms, including a few that are still in the glossary without the "terminology" flag). The Translation Team leads can also add new terms to the glossary. We would need further work to maintain the glossary.
+
 This project aims for the following:
 
 - Creation of common glossary, starting by combining Weblate glossary terminology terms and rOpenSci WIP glossary.
@@ -67,6 +69,7 @@ Design principles:
 - automate sync as much as possible, but allow control over what is included in each glossary
 
 ### Minimum Viable Product
+
 
 
 ### Architecture
