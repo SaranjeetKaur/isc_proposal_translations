@@ -70,6 +70,7 @@ Design principles:
 
 ### Minimum Viable Product
 
+A data package on R-universe that contains the common glossary and translations. The package will have a function that will allow users to update the glossary. The package will also have a function that will allow users to sync the glossary with Weblate.
 
 
 ### Architecture
@@ -80,5 +81,5 @@ The package will use the Weblate API. The package will have a data frame that wi
 
 The assumptions for this project are:
 
-1. The Weblate API will be available and accessible.
-2. The package will be able to handle different languages and translations.
+The Weblate API will be available and accessible.
+

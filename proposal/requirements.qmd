@@ -92,7 +92,7 @@ Most of the tools stated above are open-source and widely used in the R communit
 
 The project seeks funding from the R Consortium Infrastructure Steering Committee (ISC) to support the development of the R package. The funding will be used to cover the costs associated with the development, testing, documentation, and release of the package by the lead developer.
 
-The total funding expected for the project is $5,000. The breakdown of the costs is as follows:
+The total funding expected for the project is $8,000. The breakdown of the costs is as follows:
 
 
 ## Summary
@@ -100,4 +100,5 @@ The total funding expected for the project is $5,000. The breakdown of the costs
 A summary of the requirements that contextualises the costs
 -->
 
-The project requires funding to support the development of the R package that will help maintain a consistent glossary across languages and thus, improving the translation process in R. The funding will be used to cover the costs associated with the development, testing, documentation, and release of the package by the lead developer.
+The project requires funding to support the development of a data package in R and streamlining the translation process for the R community. The lead developer will be responsible for developing the R package and coordinating with the RCWG to ensure that the glossary is consistent across languages. The project will follow best practices for R package development and will seek feedback from the R community to ensure that the package meets the needs of the users. Thus improving the translations infrastructure in R and making it easier for users to contribute to the translations process. The funding will be used to cover the costs associated with the development, testing, documentation, and release of the package by the lead developer.
+

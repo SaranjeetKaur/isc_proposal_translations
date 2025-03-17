@@ -8,10 +8,9 @@ The project will be considered a success if the following criteria are met:
 
 - The key deliverables are met: the package includes the planned functionality, which is documented and tested.
 - The documentation is available on the package website.
-- At least 75% of the open issues on the planned R package repository are closed or at least become work-in-progress.
-- Eventually release the package on CRAN. (This may not happen within the proposed timeline but is a long-term goal. However, the package will be available on GitHub for users to access.)
-- Feedback is sought (and incorporated as far as possible) from the R community to ensure that the package meets the needs of the users.
-- At least two community members that are not directly involved in the project contribute to the package development, by submitting issues, making a pull request or making a commit to the git repository.
+- At least 75% of the open issues on the planned work are closed or at least become work-in-progress.
+- Feedback is sought (and incorporated as far as possible) from the R community.
+- At least two community members that are not directly involved in the project contribute to the project, by submitting issues, making a pull request or making a commit to the git repository.
 
 ## Definition of done
 <!-- 
@@ -26,8 +25,6 @@ The project will be considered done when the following criteria are met:
 
 - Feedback will be sought from the R community to ensure that the package meets the needs of the users.
 
-- Long-term goal: The package is released on CRAN.
-
 ## Measuring success
 <!-- 
 How will we know when success is achieved, what markers can we use along the way 
@@ -35,7 +32,7 @@ How will we know when success is achieved, what markers can we use along the way
 
 The success of the project will be measured by the following metrics:
 
-- At least 75% of the open issues on the planned R package repository are closed or at least become work-in-progress.
+- At least 75% of the open issues on the planned work are closed or at least become work-in-progress.
 
 - At least 85% of the pull requests are reviewed and merged.
 
@@ -48,15 +45,11 @@ How could this be extended / developed in the future by yourself and/or the comm
 
 The project can be extended in the following ways:
 
-1. Add more functions to the package to make it more user-friendly.
+1. Improve the translation process by adding more languages to the glossary.
 
-2. Improve the translation process by adding more languages to the glossary.
+2. Add more features to the package to make it more useful for users.
 
-3. Add more features to the package to make it more useful for users.
-
-4. Improve the documentation and make it more accessible to users.
-
-5. Release the package on CRAN to make it more accessible to users.
+3. Improve the documentation and make it more accessible to users.
 
 ## Key risks
 <!-- 
@@ -69,4 +62,4 @@ What sort of things could come up that can delay or break the project?
 
 -->
 
-The are not any major risks associated with this project. The idea for the project is based on an actual need by the R community and has the support of the RCWG. The lead developer has experience in developing R packages and has contributed to the R community. The project will follow the best practices for R package development and will seek feedback from the R community to ensure that the package meets the needs of the users.
+The are not any major risks associated with this project. The idea for the project is based on an actual need by the R community and has the support of the RCWG. The lead developer has experience in developing R packages and has contributed to the R community. The project will follow the best practices for R package development and will seek feedback from the R community at appropriate stages.
