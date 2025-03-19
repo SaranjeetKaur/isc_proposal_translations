@@ -21,4 +21,4 @@ The problem being addressed is the inconsistency in the translations glossary ac
 
 Previous attempts to resolve this problem have been made by the R Contribution Working Group (RCWG) through the use of Weblate. However, the translations glossary is still not consistent across languages. This proposal aims to address this issue by creating an R package that will help maintain a consistent glossary across languages and improve the translation process in R.
 
-This problem should be tackled because it affects the user experience of R for users who do not speak English. By having a consistent glossary across languages, we can improve the quality of translations and make it easier for users to contribute to the translation process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
+By having a consistent glossary across languages, we can improve the quality of translations and make it easier for users to contribute to the translation process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
