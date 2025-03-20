@@ -10,7 +10,7 @@ The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/work
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
 
-This proposal aims to improve the technical infrastructure of the translations process for R packages. The goal is to provide a common shared glossary across the different R translations projects. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
+The goal of this project is to improve the technical infrastructure of the translations process by providing a common, shared glossary across the different R projects. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
 
 At present, different R projects use different translation workflows:
 
