@@ -33,7 +33,7 @@ Depending on project type the detail section should include:
  - [ ] Assumptions
 -->
 
-The translations [glossary](https://translate.rx.studio/projects/r-project/glossary/) is not consistent across languages. The R Contributors, as a part of R Dev Days, have been working on a combined list of terms and have added a common set of 175 terms that are flagged as "terminology" in the glossary. This flag ensures the terms appear in all the [glossaries](https://docs.weblate.org/en/latest/user/glossary.html#terminology). Most languages are using essentially these terms (most have a glossary of 178 terms, including a few that are still in the glossary without the "terminology" flag). The Translation Team leads can also add new terms to the glossary. We would need further work to maintain the glossary.
+The R Contributors, as a part of R Dev Days, have been compiling a combined list of terms from the [language-specific glossaries](https://translate.rx.studio/projects/r-project/glossary/) on the R Project Weblate server and flagged 175 terms as “terminology” in the English glossary. This flag ensures this common set of terms appear in all the language-specific [glossaries](https://docs.weblate.org/en/latest/user/glossary.html#terminology). Most languages are using essentially these terms (most have a glossary of 178 terms, including a few that are still in the glossary without the "terminology" flag). The Translation Team leads can also  add further terms to the terminology set.
 
 This project aims for the following:
 
