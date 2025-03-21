@@ -10,15 +10,17 @@ The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/work
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
 
-The goal of this project is to improve the technical infrastructure of the translations process by providing a common, shared glossary across the different R projects. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
+The goal of this project is to improve the technical infrastructure of the translations process by providing a common, shared glossary across different translation projects in the R ecosystem. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.
 
 At present, different R projects use different translation workflows:
 
-- base R and the recommended packages - use Weblate, currently using the same glossary for base R and recommended packages.
+- base R and the recommended packages - use [Weblate](https://translate.rx.studio/projects/), using a common glossary across base R and recommended packages.
 - rOpenSci - uses a GitHub-based workflow. They also have a [work in progress glossary]( https://github.com/ropensci-review-tools/glossary/blob/master/glossary.csv).
 - Bioconductor - uses [Crowdin](https://bioconductor.crowdin.com) and is most likely not using any glossaries.
 
-Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, and Bioconductor.
+One-off projects, such as translating an R book, could use one of the above or yet another workflow, as the translators prefer.
+
+Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, Bioconductor, and others working on internationalization within the R community.
 
 ## Detail
 <!--
