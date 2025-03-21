@@ -3,7 +3,7 @@
 This is where the proposal should be outlined. 
 -->
 
-The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to improve the R ecosystem and receives active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiative with the aim to improve the technical infrastructure of the translations process by providing a common glossary for R translation projects and sharing the translations across projects to avoid duplicated work.
+The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to foster a wider, more diverse, community of contributors to base R. The group facilitates active contribution by the community, especially through the R Dev Days. This proposal is specifically related to efforts to support contributions to the translations of messages in base R. The aim is to improve the technical infrastructure of the translations process by providing a common glossary that can be used by all translation projects in the R ecosystem, sharing the translations across projects to avoid duplicated work.
 
 ## Overview
 <!--
