@@ -20,6 +20,7 @@ Who are the people who have actively helped with this proposal but won't necessa
 The following people (in alphabetical order) have contributed to the proposal:
 
 - [Diego Alonso Alvarez](https://profiles.imperial.ac.uk/d.alonso-alvarez)
+- [Gergely Daróczi](https://daroczig.github.io/)
 - [Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/)
 - [Michael Chirico](https://github.com/michaelchirico)
 
@@ -31,6 +32,7 @@ Who has been given the opportunity to provide feedback on the proposal? This sho
 The following people (in alphabetical order) have been consulted and have provided feedback on the proposal:
 
 - [Diego Alonso Alvarez](https://profiles.imperial.ac.uk/d.alonso-alvarez)
+- [Gergely Daróczi](https://daroczig.github.io/)
 - [Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/)
 - [Michael Chirico](https://github.com/michaelchirico)
 
