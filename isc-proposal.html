@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Saranjeet Kaur Bhogal">
-<meta name="dcterms.date" content="2025-03-20">
+<meta name="dcterms.date" content="2025-03-24">
 
 <title>Consistent Translations Glossary across R</title>
 <style>
@@ -3080,7 +3080,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-03-20</p>
+      <p class="date">2025-03-24</p>
     </div>
   </div>
   
@@ -3104,7 +3104,7 @@ An optional section would be for R-Core signatories where changes to R are propo
 <!-- 
 Who are the people responsible for actually delivering the project if the proposal gets accepted and are already signed up and rearing to go?
 -->
-<p><a href="https://profiles.imperial.ac.uk/s.bhogal">Saranjeet Kaur Bhogal</a> will be the lead developer for this project. She is a Research Software Engineer in the <a href="https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/research-software-engineering/">central Research Software Engineering team</a> at Imperial College London and has experience in developing R packages and contributing to the R community. She will be responsible for developing the R package and coordinating with the RCWG to ensure that the glossary is consistent across languages. Saranjeet is a member of the RCWG, where she has co-authored the <a href="https://contributor.r-project.org/rdevguide/">R Development Guide</a> and has also contributed to translations of R message to Hindi. She has also contributed to the R community through the R Dev Days.</p>
+<p><a href="https://profiles.imperial.ac.uk/s.bhogal">Saranjeet Kaur Bhogal</a> will be the lead developer for this project. She is a Research Software Engineer in the <a href="https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/research-software-engineering/">central Research Software Engineering team</a> at Imperial College London and has experience in developing R packages and contributing to the R community. She will be responsible for developing the proposed R package and coordinating with stakeholders, in particular the <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a>, to ensure the package integrates with their translation process. Saranjeet is a member of the RCWG, where she has co-authored the <a href="https://contributor.r-project.org/rdevguide/">R Development Guide</a> and has also contributed to translations of R messages to Hindi. She has also contributed to the R community through the <a href="https://contributor.r-project.org/events/r-dev-days/">R Dev Days</a>.</p>
 </section>
 <section id="contributors" class="level2">
 <h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
@@ -3138,20 +3138,21 @@ It is important to cover:
 <!--
 This is where the proposal should be outlined. 
 -->
-<p>The <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a> has been involved in a number of projects to improve the R ecosystem and receives active contribution by the community, especially through the R Dev Days. This proposal is specifically related to one such initiative with the aim to improve the technical infrastructure of the translations process by providing a common glossary for R translation projects and sharing the translations across projects to avoid duplicated work.</p>
+<p>The <a href="https://contributor.r-project.org/working-group">R Contribution Working Group (RCWG)</a> has been involved in a number of projects to foster a wider, more diverse, community of contributors to base R. The group facilitates active contribution by the community, especially through the R Dev Days. This proposal is specifically related to efforts to support contributions to the translations of messages in base R. The aim is to improve the technical infrastructure of the translations process by providing a common glossary that can be used by all translation projects in the R ecosystem, sharing the translations across projects to avoid duplicated work.</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
-<p>The goal of this project is to improve the technical infrastructure of the translations process by providing a common, shared glossary across the different R projects. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
+<p>The goal of this project is to improve the technical infrastructure of the translations process by providing a common, shared glossary across different translation projects in the R ecosystem. It will help in improving the quality of translations and make it easier for users to contribute to the translations process. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R.</p>
 <p>At present, different R projects use different translation workflows:</p>
 <ul>
-<li>base R and the recommended packages - use Weblate, currently using the same glossary for base R and recommended packages.</li>
+<li>base R and the recommended packages - use <a href="https://translate.rx.studio/projects/">Weblate</a>, using a common glossary across base R and recommended packages.</li>
 <li>rOpenSci - uses a GitHub-based workflow. They also have a <a href="https://github.com/ropensci-review-tools/glossary/blob/master/glossary.csv">work in progress glossary</a>.</li>
 <li>Bioconductor - uses <a href="https://bioconductor.crowdin.com">Crowdin</a> and is most likely not using any glossaries.</li>
 </ul>
-<p>Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, and Bioconductor.</p>
+<p>One-off projects, such as translating an R book, could use one of the above or yet another workflow, as the translators prefer.</p>
+<p>Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, Bioconductor, and others working on internationalization within the R community.</p>
 </section>
 <section id="detail" class="level2">
 <h2 class="anchored" data-anchor-id="detail">Detail</h2>
@@ -3164,7 +3165,7 @@ Depending on project type the detail section should include:
  - [ ] Architecture
  - [ ] Assumptions
 -->
-<p>The translations <a href="https://translate.rx.studio/projects/r-project/glossary/">glossary</a> is not consistent across languages. The R Contributors, as a part of R Dev Days, have been working on a combined list of terms and have added a common set of 175 terms that are flagged as “terminology” in the glossary. This flag ensures the terms appear in all the <a href="https://docs.weblate.org/en/latest/user/glossary.html#terminology">glossaries</a>. Most languages are using essentially these terms (most have a glossary of 178 terms, including a few that are still in the glossary without the “terminology” flag). The Translation Team leads can also add new terms to the glossary. We would need further work to maintain the glossary.</p>
+<p>The R Contributors, as a part of R Dev Days, have been compiling a combined list of terms from the <a href="https://translate.rx.studio/projects/r-project/glossary/">language-specific glossaries</a> on the R Project Weblate server and flagged 175 terms as “terminology” in the English glossary. This flag ensures this common set of terms appear in all the language-specific <a href="https://docs.weblate.org/en/latest/user/glossary.html#terminology">glossaries</a>. Most languages are using essentially these terms (most have a glossary of 178 terms, including a few that are still in the glossary without the “terminology” flag). The Translation Team leads can also add further terms to the terminology set.</p>
 <p>This project aims for the following:</p>
 <ul>
 <li>Creation of common glossary, starting by combining Weblate glossary terminology terms and rOpenSci WIP glossary.
@@ -3231,7 +3232,7 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Licence decisions
  - [ ] Reporting framework
 -->
-<p>The project will be setup as a GitHub repository and the various steps for the development will be opened as issues on GitHub. Development will take place and be tracked by creating pull requests associated to the issues. Appropriate license will be chosen for the package. The contributors to the project will be acknowledged using the all contributors bot on GitHub. The work on the project will be regularly reported to the community through the <a href="https://contributor.r-project.org/events/office-hours/">R Contributor Office Hours</a>.</p>
+<p>The project will be setup as a GitHub repository and the various steps for the development will be opened as issues on GitHub. Development will take place and be tracked by creating pull requests associated to the issues. Appropriate license will be chosen for the package. The contributors to the project will be acknowledged using the all contributors bot on GitHub. The work on the project will be regularly reported to the community through the <a href="https://contributor.r-project.org/working-group">R Contribution Working Group</a> meetings and occasionally through the <a href="https://contributor.r-project.org/events/office-hours/">R Contributor Office Hours</a>.</p>
 </section>
 <section id="technical-delivery" class="level2">
 <h2 class="anchored" data-anchor-id="technical-delivery">Technical delivery</h2>
@@ -3240,7 +3241,7 @@ Covering the actual delivery of the project this section should provide at least
 
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
-<p>The work on the package development will begin around July 2025 until October 2025. The development work will be associated with milestones and deliverables which will be tracked through GitHub. A final blog post will be published to share the work done along with social media announcements. If possible, the work will also be publised on relevant events and R community events (including R-Ladies and RUG meetups).</p>
+<p>The work on the package development will begin around July 2025 until October 2025. The development work will be associated with milestones and deliverables which will be tracked through GitHub. A final blog post will be published to share the work done along with social media announcements. If possible, the work will also be publicised at relevant events, including R-Ladies+ and RUG meetups.</p>
 </section>
 <section id="other-aspects" class="level2">
 <h2 class="anchored" data-anchor-id="other-aspects">Other aspects</h2>
