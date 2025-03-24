@@ -22,6 +22,7 @@ The following people (in alphabetical order) have contributed to the proposal:
 - [Diego Alonso Alvarez](https://profiles.imperial.ac.uk/d.alonso-alvarez)
 - [Gergely Daróczi](https://daroczig.github.io/)
 - [Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/)
+- [Maëlle Salmon](https://masalmon.eu/)
 - [Michael Chirico](https://github.com/michaelchirico)
 
 ## Consulted
@@ -34,5 +35,6 @@ The following people (in alphabetical order) have been consulted and have provid
 - [Diego Alonso Alvarez](https://profiles.imperial.ac.uk/d.alonso-alvarez)
 - [Gergely Daróczi](https://daroczig.github.io/)
 - [Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/)
+- [Maëlle Salmon](https://masalmon.eu/)
 - [Michael Chirico](https://github.com/michaelchirico)
 
