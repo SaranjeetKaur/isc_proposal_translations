@@ -19,7 +19,7 @@ Covering the actual delivery of the project this section should provide at least
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
 
-The work on the package development will begin around July 2025 until October 2025. The development work will be associated with milestones and deliverables which will be tracked through GitHub. A final blog post will be published to share the work done along with social media announcements. If possible, the work will also be publicised pn relevant events, including R-Ladies+ and RUG meetups..
+The work on the package development will begin around July 2025 until October 2025. The development work will be associated with milestones and deliverables which will be tracked through GitHub. A final blog post will be published to share the work done along with social media announcements. If possible, the work will also be publicised at relevant events, including R-Ladies+ and RUG meetups.
 
 ## Other aspects
 <!--
