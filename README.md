@@ -12,7 +12,7 @@ An example of diverging translation of glossary terms is found in the rOpensci E
 |--------|--------------------|--------------------------------------------|
 | path    | ruta de acceso     | ruta (file path) / trayecto (polygon path) |   
 
-that could be due to the term arising in different contexts though. There are many examples of diverging translations that might have been avoided if a glossary had been used, e.g. in base R "loop" is variously translated as "bucle", "loop", "ciclo" - both rOpensci and R project glossaries agree on "bucle" being the preferred term; sometimes "camino" is used rather than "ruta" for a file path. These don't change the meaning but may read a bit strangely. Since, there are limited glossaries to compare, it is difficult to provide more examples.
+It's possible that's due to the term arising in different contexts; nevertheless, there are many examples of diverging translations that might have been avoided if a glossary had been used. For example, in base R, "loop" is variously translated as "bucle", "loop", "ciclo", though both the rOpensci and R project glossaries agree on "bucle" being the preferred term; sometimes "camino" is used rather than "ruta" for a file path. These don't change the meaning but may read a bit strangely. (A more thorough investigation of the inconsistencies in the glossaries is out-of-scope for this proposal)
 
 This proposal aims to address this issue by creating a data package in R package that will help maintain a consistent glossary to improve the quality of translations. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R. Previously this problem has been discussed within the R Contribution Working Group (RCWG).
 
