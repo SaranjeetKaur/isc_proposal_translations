@@ -41,7 +41,7 @@ This project aims for the following:
   - Columns to include: date added, source string, translations for different languages, optional explanation for different languages (e.g. can explain that a particular word should be kept in English, or note synonyms), explanation in English (can be used to explain the meaning of a term), added via (Weblate/GitHub), updated via (Weblate/GitHub), Weblate (include/exclude/NA),
 
 - Documented process for people to suggest additions to and deletions from the common glossary.
-  - Preferred: pull request on the underlying CSV so that it is easy to update the common glossary once proposed changes are reviewed
+  - Preferred: pull request on the underlying CSV so that it is easy to update the common glossary once proposed changes are reviewed. Another benefit of having the CSV format is the glossary can be re-used by people without independently of the proposed package. Another approach would be to use a YAML format that can be compiled into a CSV, if needed. When using a YAML with support for lists, each translation could have its own line, and it could include a lot of metadata (if needed) as it would not be restricted by the tabular format.
   - Alternative: proposal via GitHub issue, perhaps using template to ensure essential information is given
   
 - Tools to update common glossary with updates from Weblate
