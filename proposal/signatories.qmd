@@ -24,6 +24,7 @@ The following people (in alphabetical order) have contributed to the proposal:
 - [Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/)
 - [Maëlle Salmon](https://masalmon.eu/)
 - [Michael Chirico](https://github.com/michaelchirico)
+- [Yanina Bellini Saibene](https://yabellini.netlify.app/)
 
 ## Consulted
 <!-- 
@@ -37,4 +38,5 @@ The following people (in alphabetical order) have been consulted and have provid
 - [Heather Turner](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/turner/)
 - [Maëlle Salmon](https://masalmon.eu/)
 - [Michael Chirico](https://github.com/michaelchirico)
+- [Yanina Bellini Saibene](https://yabellini.netlify.app/)
 
