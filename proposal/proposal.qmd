@@ -83,3 +83,6 @@ The assumptions for this project are:
 
 The Weblate API will be available and accessible.
 
+### Sustainability
+
+This project will be maintained by the R Contribution Working Group. A process will be provided for people to suggest additions to and deletions from the common glossary.
