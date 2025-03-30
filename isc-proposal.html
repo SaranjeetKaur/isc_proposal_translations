@@ -3149,7 +3149,31 @@ It is important to cover:
  - [ ] Have there been previous attempts to resolve the problem
  - [ ] Why it should be tackled
 -->
-<p>The problem being addressed is the inconsistency in the translations glossary across languages in R. This proposal aims to address this issue by creating a data package in R package that will help maintain a consistent glossary to improve the quality of translations. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R. Previously this problem has been discussed within the R Contribution Working Group (RCWG).</p>
+<p>There are many volunteer translation efforts across the R community (messages in base R/recommended packages, individual packages, rOpenSci materials such as their package development guide, Bioconductor training materials, R books such as R for Data Science, etc). These projects often have their own glossaries, since the benefits of using a glossary in translation projects are widely recognised (improves translation quality, reduces translation effort). However, developing and maintaining separate glossaries for each translation project reduces these benefits - different projects may use different translations for certain terms, effort to identify relevant terms and translate them is duplicated across projects putting unnecessary burden on volunteers. Some projects do not have the volunteer capacity to translate the glossary into multiple languages, or may not even use a glossary. Currently it is difficult for projects to take full advantage of existing glossaries due to diversity in the choice of translation infrastructure. These issues will become even more important if internationalization of R help pages becomes more common (ref R Consortium-funded project: <a href="https://r-consortium.org/all-projects/2023-group-2.html#tooling-for-internationalization-of-r-help-pages">tooling-for-internationalization-of-r-help-pages</a>)</p>
+<p>An example of diverging translation of glossary terms is found in the rOpensci English-Spanish glossary:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 27%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>English</th>
+<th>Spanish (rOpenSci)</th>
+<th>Spanish (R project)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>path</td>
+<td>ruta de acceso</td>
+<td>ruta (file path) / trayecto (polygon path)</td>
+</tr>
+</tbody>
+</table>
+<p>It’s possible that’s due to the term arising in different contexts; nevertheless, there are many examples of diverging translations that might have been avoided if a glossary had been used. For example, in base R, “loop” is variously translated as “bucle”, “loop”, “ciclo”, though both the rOpensci and R project glossaries agree on “bucle” being the preferred term; sometimes “camino” is used rather than “ruta” for a file path. These don’t change the meaning but may read a bit strangely.</p>
+<p>This proposal aims to address this issue by creating a data package in R package that will help maintain a consistent glossary to improve the quality of translations. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R. Previously this problem has been discussed within the R Contribution Working Group (RCWG)</p>
 </section>
 <section id="the-proposal" class="level1">
 <h1>The proposal</h1>
@@ -3235,6 +3259,16 @@ Depending on project type the detail section should include:
 <h3 class="anchored" data-anchor-id="assumptions">Assumptions</h3>
 <p>The assumptions for this project are:</p>
 <p>The Weblate API will be available and accessible.</p>
+</section>
+<section id="further-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="further-considerations">Further considerations</h3>
+<p>It would be beneficial to refer to what has been previously built. For example, as a source, rOpenSci consults <a href="https://glosario.carpentries.org">glosario</a>, a community-curated glossary of data science terms, although it has a broader scope as a glossary. Hence, it would be worth considering syncing with glosario to ensure that the R glossary is consistent with the broader data science community. Thus, this work would benefit not only the R community but also the broader ecosystem. Given the broader scope of glosario, a two-way sync would be beneficial. For instance, a two-way sync for terms in the R glossary that are also in glosario, i.e.</p>
+<ul>
+<li>copy over translations and explanations from glosario to the R glossary (under CC-By-4.0 license, attribution could be given in the documentation for the new package), where these are missing in the R glossary</li>
+<li>contribute any translations back from the R glossary to glosario</li>
+</ul>
+<p>Applying a CC0 licence to the glossary would support in freely sharing the glossary with other projects.</p>
+<p>Notably, there is an R package associated with glosario (<a href="https://github.com/carpentries/glosario-r/">glosario-r</a>), which is a WIP but can be used to retrieve glossaries.</p>
 </section>
 <section id="sustainability" class="level3">
 <h3 class="anchored" data-anchor-id="sustainability">Sustainability</h3>
