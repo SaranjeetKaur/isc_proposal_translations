@@ -17,4 +17,14 @@ It is important to cover:
 -->
 ```
 
-The problem being addressed is the inconsistency in the translations glossary across languages in R. This proposal aims to address this issue by creating a data package in R package that will help maintain a consistent glossary to improve the quality of translations. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R. Previously this problem has been discussed within the R Contribution Working Group (RCWG).
+There are many volunteer translation efforts across the R community (messages in base R/recommended packages, individual packages, rOpenSci materials such as their package development guide, Bioconductor training materials, R books such as R for Data Science, etc). These projects often have their own glossaries, since the benefits of using a glossary in translation projects are widely recognised (improves translation quality, reduces translation effort). However, developing and maintaining separate glossaries for each translation project reduces these benefits - different projects may use different translations for certain terms, effort to identify relevant terms and translate them is duplicated across projects putting unnecessary burden on volunteers. Some projects do not have the volunteer capacity to translate the glossary into multiple languages, or may not even use a glossary. Currently it is difficult for projects to take full advantage of existing glossaries due to diversity in the choice of translation infrastructure. These issues will become even more important if internationalization of R help pages becomes more common (ref R Consortium-funded project: [tooling-for-internationalization-of-r-help-pages](https://r-consortium.org/all-projects/2023-group-2.html#tooling-for-internationalization-of-r-help-pages))
+
+An example of diverging translation of glossary terms is found in the rOpensci English-Spanish glossary:
+
+| English | Spanish (rOpenSci) | Spanish (R project)                        |
+|--------|--------------------|--------------------------------------------|
+| path    | ruta de acceso     | ruta (file path) / trayecto (polygon path) |   
+
+It's possible that's due to the term arising in different contexts; nevertheless, there are many examples of diverging translations that might have been avoided if a glossary had been used. For example, in base R, "loop" is variously translated as "bucle", "loop", "ciclo", though both the rOpensci and R project glossaries agree on "bucle" being the preferred term; sometimes "camino" is used rather than "ruta" for a file path. These don't change the meaning but may read a bit strangely.
+
+This proposal aims to address this issue by creating a data package in R package that will help maintain a consistent glossary to improve the quality of translations. This will help in making R more accessible to users who do not speak English and improve the overall user experience of R. Previously this problem has been discussed within the R Contribution Working Group (RCWG)
