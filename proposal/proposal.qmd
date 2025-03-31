@@ -3,7 +3,7 @@
 This is where the proposal should be outlined. 
 -->
 
-The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to foster a wider, more diverse, community of contributors to base R. The group facilitates active contribution by the community, especially through the R Dev Days. This proposal is specifically related to efforts to support contributions to the translations of messages in base R. The aim is to improve the technical infrastructure of the translations process by providing a common glossary that can be used by all translation projects in the R ecosystem, sharing the translations across projects to avoid duplicated work.
+The [R Contribution Working Group (RCWG)](https://contributor.r-project.org/working-group) has been involved in a number of projects to foster a wider, more diverse, community of contributors to base R. The group facilitates active contribution by the community, especially through the R Dev Days. This proposal is specifically related to efforts to support contributions to the translations of messages in R. The aim is to improve the technical infrastructure of the translations process by providing a common glossary that can be used by all translation projects in the R ecosystem, thus avoiding duplicated work and effort.
 
 ## Overview
 <!--
@@ -18,7 +18,7 @@ At present, different R projects use different translation workflows:
 - rOpenSci - uses a GitHub-based workflow. They also have a [work in progress glossary]( https://github.com/ropensci-review-tools/glossary/blob/master/glossary.csv).
 - Bioconductor - uses [Crowdin](https://bioconductor.crowdin.com) and is most likely not using any glossaries.
 
-One-off projects, such as translating an R book, could use one of the above or yet another workflow, as the translators prefer.
+One-off projects, such as translating an R book or translating messages in individual package, could use one of the above or yet another workflow, as the translators prefer.
 
 Hence, we want to store the glossary and translations in an R package, provide a process for proposing changes outside of Weblate, and provide tools for syncing with Weblate (possibly also Crowdin), potentially benefiting base R and recommended packages, rOpenSci, Bioconductor, and others working on internationalization within the R community.
 
@@ -37,38 +37,38 @@ The R Contributors, as a part of R Dev Days, have been compiling a combined list
 
 This project aims for the following:
 
-- Creation of common glossary, starting by combining Weblate glossary terminology terms and rOpenSci WIP glossary.
-  - Columns to include: date added, source string, translations for different languages, optional explanation for different languages (e.g. can explain that a particular word should be kept in English, or note synonyms), explanation in English (can be used to explain the meaning of a term), added via (Weblate/GitHub), updated via (Weblate/GitHub), Weblate (include/exclude/NA),
+- Creation of common glossary, starting by combining Weblate glossary terminology terms and rOpenSci WIP glossary:
+  - Columns to include: date added, source string, translations for different languages, optional explanation for different languages (e.g. can explain that a particular word should be kept in English, or note synonyms), explanation in English (can be used to explain the meaning of a term), added via (Weblate/GitHub), updated via (Weblate/GitHub), Weblate (include/exclude/NA).
 
-- Documented process for people to suggest additions to and deletions from the common glossary.
-  - Preferred: pull request on the underlying CSV so that it is easy to update the common glossary once proposed changes are reviewed. Another benefit of having the CSV format is the glossary can be re-used by people without independently of the proposed package. Another approach would be to use a YAML format that can be compiled into a CSV, if needed. When using a YAML with support for lists, each translation could have its own line, and it could include a lot of metadata (if needed) as it would not be restricted by the tabular format.
-  - Alternative: proposal via GitHub issue, perhaps using template to ensure essential information is given
+- Documented process for people to suggest additions to and deletions from the common glossary:
+  - Preferred: pull request on the underlying CSV so that it is easy to update the common glossary once proposed changes are reviewed. A benefit of having the CSV format is the glossary can be re-used by people independently of the proposed package. Another approach would be to use a YAML format that can be compiled into a CSV, if needed. When using a YAML with support for lists, each translation could have its own line, and it could include a lot of metadata (if needed) as it would not be restricted by the tabular format,
+  - Alternative: proposal via GitHub issue, perhaps using template to ensure essential information is given.
   
-- Tools to update common glossary with updates from Weblate
-  - Get current glossary and translations from Weblate.
-  - Update common glossary with new terminology and their translations (set `added_via` column to Weblate and `weblate` to include)
-  - Update common glossary with new/updated translations of existing terms (set `update_via` column to Weblate)
-  - Update common glossary with deleted terms. These terms should not be removed, but the `weblate` column should be set to exclude)
-  - GitHub Action to regularly update common glossary based on updates to Weblate
+- Tools to update common glossary with updates from Weblate:
+  - Get current glossary and translations from Weblate,
+  - Update common glossary with new terminology and their translations (set `added_via` column to Weblate and `weblate` to include),
+  - Update common glossary with new/updated translations of existing terms (set `update_via` column to Weblate),
+  - Update common glossary with deleted terms. These terms should not be removed, but the `weblate` column should be set to exclude),
+  - GitHub Action to regularly update common glossary based on updates to Weblate.
   
-- Tools to update Weblate with changes in common glossary
-  - Get current glossary and translations from Weblate.
-Update Weblate glossary with terms added via GitHub that are flagged to be included. (Should be added to English glossary with flag "terminology".)
-  - Update Weblate glossary with new/updated translations of terminology terms.
+- Tools to update Weblate with changes in common glossary:
+  - Get current glossary and translations from Weblate,
+  - Update Weblate glossary with terms added via GitHub that are flagged to be included (should be added to English glossary with flag "terminology"),
+  - Update Weblate glossary with new/updated translations of terminology terms,
   - GitHub action to regularly update Weblate based on changes to common glossary. Need to ask Gergely if this is possible - may need to be semi-manual process.
 
-- Tools for CrowdIn
+- Tools for CrowdIn:
   - Could be similar to those for Weblate, but currently no glossary to test on. Could perhaps start one on an active project.
 
-- Maintenance tools (for tasks requiring manual review, that may need doing from time to time).
-  - Identify strings in common glossary that have been removed from Weblate (`added_via` is Weblate but `weblate` is `exclude`). Select to keep (change `added_via` to GtiHub) or delete (remove term from common glossary).
-  - Identify strings in common glossary that are not on Weblate (`added_via` is GitHub and `weblate` is NA). Select to add (set `weblate` to include) or ignore (set `weblate` to `exclude`).
-  - Identify strings in the Weblate glossary that are not flagged as "terminology". Select to add terminology flag or remove.
-  - Identify strings in the Weblate glossary that are not flagged as "terminology". Remove from the Weblate glossary for all languages.
+- Maintenance tools (for tasks requiring manual review, that may need doing from time to time):
+  - Identify strings in common glossary that have been removed from Weblate (`added_via` is Weblate but `weblate` is `exclude`). Select to keep (change `added_via` to GtiHub) or delete (remove term from common glossary),
+  - Identify strings in common glossary that are not on Weblate (`added_via` is GitHub and `weblate` is NA). Select to add (set `weblate` to include) or ignore (set `weblate` to `exclude`),
+  - Identify strings in the Weblate glossary that are not flagged as "terminology". Select to add terminology flag or remove,
+  - Identify strings in the Weblate glossary that are not flagged as "terminology". Remove from the Weblate glossary for all languages,
   - Identify strings in that are in language-specific glossaries but not in the English glossary. Select to add terminology flag or remove (language leads can propose new terms, but should end up using for all languages or none).
   
 Design principles:
-- automate sync as much as possible, but allow control over what is included in each glossary
+  - Automate synchronously as much as possible, but allow control over what is included in each glossary.
 
 ### Minimum Viable Product
 
@@ -81,20 +81,7 @@ The package will use the Weblate API. The package will have a data frame that wi
 
 ### Assumptions
 
-The assumptions for this project are:
-
-The Weblate API will be available and accessible.
-
-### Further considerations
-
-It would be beneficial to refer to what has been previously built. For example, as a source, rOpenSci consults [glosario](https://glosario.carpentries.org), a community-curated glossary of data science terms, although it has a broader scope as a glossary. Hence, it would be worth considering syncing with glosario to ensure that the R glossary is consistent with the broader data science community. Thus, this work would benefit not only the R community but also the broader ecosystem. Given the broader scope of glosario, a two-way sync would be beneficial. For instance, a two-way sync for terms in the R glossary that are also in glosario, i.e.
-
-- copy over translations and explanations from glosario to the R glossary (under CC-By-4.0 license, attribution could be given in the documentation for the new package), where these are missing in the R glossary
-- contribute any translations back from the R glossary to glosario
-
-Applying a CC0 licence to the glossary would support in freely sharing the glossary with other projects.
-
-Notably, there is an R package associated with glosario ([glosario-r](https://github.com/carpentries/glosario-r/)), which is a WIP but can be used to retrieve glossaries.
+The Weblate API is made available and accessible to the developer. This has been discussed in the [relevant issue](https://github.com/SaranjeetKaur/isc_proposal_translations/issues/15).
 
 ### Sustainability
 
