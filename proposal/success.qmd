@@ -51,7 +51,7 @@ copy over translations and explanations from glosario to the R glossary (under C
 contribute any translations back from the R glossary to glosario
 Applying a CC0 licence to the glossary would support in freely sharing the glossary with other projects.
 
-Notably, there is an R package associated with glosario (glosario-r), which is a WIP but can be used to retrieve glossaries.
+Notably, there is an R package associated with glosario ([glosario-r]( https://github.com/carpentries/glosario-r/)), which is a WIP but can be used to retrieve glossaries.
 
 ## Key risks
 <!-- 
