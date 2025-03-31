@@ -17,7 +17,7 @@ Who are the people responsible for actually delivering the project if the propos
 Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
 -->
 
-The following people (in alphabetical order) have contributed to the proposal:
+This proposal has benefitted by the contributions of the following people (in alphabetical order):
 
 - [Diego Alonso Alvarez](https://profiles.imperial.ac.uk/d.alonso-alvarez)
 - [Gergely Daróczi](https://daroczig.github.io/)
