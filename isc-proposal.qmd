@@ -4,7 +4,7 @@ author:
   - name: Saranjeet Kaur Bhogal
     orcid: 0000-0002-7038-1457
     affiliations:
-      - "Imperial College London"
+      - "Research Software Engineer, Imperial College London"
     
 date: today
 date-format: iso

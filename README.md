@@ -1,4 +1,4 @@
-# isc-proposal
+# R Consortium ISC Proposal (September 2025)
 
 ## Consistent Translations Glossary across R
 
