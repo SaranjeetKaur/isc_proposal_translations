@@ -61,7 +61,7 @@ The project will use several packages in R that support the package development 
 
 The project seeks funding from the R Consortium Infrastructure Steering Committee (ISC) to support the development of the R package. The funding will be used to cover the time that the lead developer will invest in the development of the package.
 
-The total funding requested for the project is $8,000.
+The total funding requested for the project is $5,000.
 
 ## Summary
 <!--

@@ -19,16 +19,15 @@ Covering the actual delivery of the project this section should provide at least
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
 
-The work on the package development is scheduled for July - November 2025. 
+The work on the package development is scheduled for January - April 2026. 
 
 | Timeline | Tasks and milestones |
 |--------|--------------------|
-| First half of July 2025    | Setup the technical infrastructure and create issues on the GitHub repo|
-| Mid July 2025 | Present the initial setup to the RCWG and get feedback|
-| Second half of July 2025 - September 2025 | Development work |
-| End of September 2025 | Mid project presentation to the RCWG and get feedback|
-| October 2025 - November 2025 | Continue the development work based on the feedback|
-| End of November 2025 | Final presentation to the RCWG, write and share a blog post about the work|
+| First half of January 2026    | Create issues on the GitHub repo|
+| Second half of January - February 2026 | Development work |
+| End of February 2026 | Mid project presentation to the RCWG and get feedback|
+| March - April 2026 | Continue the development work based on the feedback|
+| End of April 2026 | Final presentation to the RCWG, write and share a blog post about the work|
 
 The development work will be associated with milestones and deliverables which will be tracked through GitHub. A final blog post will be published to share the work done along with social media announcements. If possible, the work will also be publicised at relevant events, including R-Ladies+ and RUG meetups.
 
