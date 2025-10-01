@@ -18,5 +18,7 @@ This proposal aims to address this issue by creating a data package in R package
 
 Feedback on the proposal is welcome - please feel free to provide your feedback by opening an issue in this repository.
 
-## License
+## Project initiation
+
+Saranjeet Kaur Bhogal, the lead of this project, initiated developing the base structure of this [glossary package](https://github.com/r-devel/glossary?tab=readme-ov-file) during the [R Dev Day at RSECon25](https://rsecon25.society-rse.org/r-dev-day-rsecon25/). The [community members](https://github.com/r-devel/glossary?tab=readme-ov-file#contributors) participating in the dev day collaborated to make contributions to the base structure of the package. There were also discussions about next steps and future plans for the package.
 
